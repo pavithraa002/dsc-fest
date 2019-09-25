@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body 
+{
+  margin: 0;
+  min-width: 250px;
+}
+
+*
+ {
+  box-sizing: border-box;
+}
+
+ul
+ {
+  margin: 0;
+  padding: 0;
+}
+
+ul li 
+{
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 24px;
+  transition: 0.2s;
+  }
+
+ul li:hover
+ {
+  background: #ddd;
+}
+
+
+ul li.checked 
+{
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+
+ul li.checked::before
+ {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.s1
+{
+	font-size:20px;
+	text-color:yellow;
+	text-decoration:line-through;
+}
+
+</style>
+</head>
+<body>
+
+<ul id="u1">
+
+<li>Homework <br>
+<input type="checkbox" id = "c1" onclick="P1()" >Physics</input>
+<input type="checkbox" id="c2" onclick="P2()">Maths</input></li>
+
+<li>Classwork <br>
+<input type="checkbox" id="c3" onclick="P3()">Electronics</input>
+<input type="checkbox" id="c4" onclick="P4()">Computer Science</input></li>
+
+<li>Assignment work <br>
+<input type = "checkbox" id="c5" onclick="P5()">Mechanical</input>
+<input type="checkbox" id = "c6" onclick="P6()">Civil</input></li>
+
+<li>Project work <br>
+<input type="checkbox" id="c7" onclick="P7()">Project 1</input>
+<input type="checkbox" id="c8" onclick="P8()">Project 2</input></li>
+
+<li>Fets work <br>
+<input type="checkbox" id="c9" onclick="P9()">Fest1</input>
+<input type="checkbox" id="c10" onclick="P10()">Fst2</input></li>
+</ul>
+
+<script>
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) 
+			{
+  				if (ev.target.tagName === 'LI' &&document.getElementById('c1').checked == true) 
+				{
+    					ev.target.classList.toggle('checked');
+  				}
+			}, false);
+
+function P1()
+{
+	document.getElementById("c1").className = "s1";
+}
+function P2()
+{
+	document.getElementById("c2").className = "s1";
+}
+function P3()
+{
+	document.getElementById("c3").className = "s1";
+}
+function P4()
+{
+	document.getElementById("c4").className = "s1";
+}function P5()
+{
+	document.getElementById("c5").className = "s1";
+}function P6()
+{
+	document.getElementById("c6").className = "s1";
+}function P7()
+{
+	document.getElementById("c7").className = "s1";
+}function P8()
+{
+	document.getElementById("c8").className = "s1";
+}function P9()
+{
+	document.getElementById("c9").className = "s1";
+}function P10()
+{
+	document.getElementById("c10").className = "s1";
+}		
+
+
+</script>
+</body>
+</html>
